@@ -2,7 +2,7 @@ package CoffeeMachine;
 
 import java.util.Scanner;
 
-class Display extends CoffeeMachine {
+class Display {
 
     static Scanner scanner = new Scanner(System.in);
 
