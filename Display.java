@@ -47,16 +47,6 @@ class Display extends CoffeeMachine {
         }
     }
 
-    static void printState() {
-        System.out.println("\nThe coffee machine has:");
-        System.out.printf("%d ml of water\n%d ml of milk\n%d g of coffee beans\n%d disposable cups\n$%d of money\n\n",
-                Resources.WATER.getRemainder(),
-                Resources.MILK.getRemainder(),
-                Resources.COFFEE_BEANS.getRemainder(),
-                Resources.DISPOSABLE_CUPS.getRemainder(),
-                Resources.MONEY.getRemainder());
-    }
-
     static void menuFillSupplies() {
         for (int i = 0; i < 4; i++) {
             int addedQuantity = scanner.nextInt();
@@ -67,6 +57,16 @@ class Display extends CoffeeMachine {
             System.out.println(userRequest[i]);
             Resources.values()[i].addToRemainder(addedQuantity);
         }
+    }
+
+    static void printState() {
+        System.out.println("\nThe coffee machine has:");
+        System.out.printf("%d ml of water\n%d ml of milk\n%d g of coffee beans\n%d disposable cups\n$%d of money\n\n",
+                Resources.WATER.getRemainder(),
+                Resources.MILK.getRemainder(),
+                Resources.COFFEE_BEANS.getRemainder(),
+                Resources.DISPOSABLE_CUPS.getRemainder(),
+                Resources.MONEY.getRemainder());
     }
 }
 
